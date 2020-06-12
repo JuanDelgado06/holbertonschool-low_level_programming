@@ -1,10 +1,12 @@
 #include <stdlib.h>
+#include <time.h>
 #include <stdio.h>
 /**
- * main - count number
- *
- * return 0
+* main - Entry point
+*
+* Return: Always 0 (Success)
 */
+#include <stdio.h>
 int main(void)
 {
 int num = 0;
