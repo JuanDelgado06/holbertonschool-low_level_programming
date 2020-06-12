@@ -8,13 +8,13 @@
  */
 int main(void)
 {
-char alpha = 'a';
+char alphabet = 'a';
 
-while (alpha <= 'z')
+while (alphabet <= 'z')
 {
-if (alpha != 'e' && alpha != 'q')
-putchar(alpha);
-alpha++;
+if (alphabet != 'q' && alphabet != 'e')
+putchar(alphabet);
+alphabet++;
 }
 
 putchar('\n');
