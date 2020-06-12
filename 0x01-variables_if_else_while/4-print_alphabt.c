@@ -1,11 +1,12 @@
 #include <stdlib.h>
-#include <ctype.h>
+#include <time.h>
 #include <stdio.h>
 /**
- * main - Print alphabet
- *
- * return 0
- */
+* main - Entry point
+*
+* Return: Always 0 (Success)
+*/
+#include <stdio.h>
 int main(void)
 {
 char alphabet = 'a';
