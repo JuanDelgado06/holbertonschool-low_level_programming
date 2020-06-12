@@ -8,12 +8,10 @@
 */
 int main(void)
 {
-int i;
+int num = 0;
 
-for (i = 0; i < 10; i++)
-{
-printf("%d", i);
-}
+while (num < 10)
+printf("%d", num++);
 
 printf("\n");
 return (0);
