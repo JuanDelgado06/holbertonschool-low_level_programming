@@ -9,7 +9,6 @@ int main(void)
 {
 char alpha = 'a';
 char alphacap = 'A';
-
 while (alpha <= 'z')
 putchar(alpha++);
 while (alphacap <= 'Z')
