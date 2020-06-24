@@ -8,4 +8,4 @@ echo "Escribe tu codigo"
 read MYCODE
 echo $MYCODE >> $NF
 chmod u+x $NF
-less $NF
+nano $NF
