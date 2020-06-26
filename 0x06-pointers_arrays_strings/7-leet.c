@@ -1,4 +1,3 @@
-#include <holberton.h>
 /**
  * leet - replace letters with numbers
  * @str: pointer to an array of words
