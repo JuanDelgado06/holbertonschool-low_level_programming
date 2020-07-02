@@ -1,58 +1,41 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
- * _strstr - Locate a substring
- * @haystack: The string to search
- * @needle: The substring to search for
+ * _strstr - first occurrence of the substring
+ * @haystack : string
+ * @needle : substring
  *
- * Return: Pointer to the first occurrence of the substring needle
- * in the string haystack
+ * Return: substring or null
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j, size_haystack, size_needle;
-	char *p = '\0';
+	int i;
+	char *match = 0;
+	char **p;
 
-	if (needle[0] == '\0')
-		return (haystack);
-
-	size_haystack = _strlen(haystack);
-	size_needle = _strlen(needle);
-
-	for (i = 0; i < size_haystack; i++)
+	if (*needle == '\0')
 	{
-		if (haystack[i] == needle[0])
+		return (haystack);
+	}
+	while (*haystack != '\0')
+	{
+		if (*haystack == *needle)
 		{
-			p = &haystack[i];
-			for (j = 0; j < size_needle; j++)
+			p = &haystack;
+			for (i = 0; *(needle + i) != '\0'; i++)
 			{
-				if (haystack[i + j] != needle[j])
+				if (*(needle + i) != *(haystack + i))
 				{
-					p = '\0';
 					break;
 				}
-
-				if (j == size_needle - 1)
-					i = size_haystack;
+				if (*(needle + i + 1) == 0)
+				{
+					return (*p);
+				}
 			}
 		}
+		haystack++;
 	}
-
-	return (p);
-}
-
-/**
- * _strlen - Return the length of a string
- * @s: The string to check
- *
- * Return: The length of the string
- */
-int _strlen(char *s)
-{
-	int i;
-
-	for (i = 0; s[i] != '\0'; i++)
-		;
-
-	return (i);
+return (match);
 }
